@@ -1,0 +1,4 @@
+ignore:
+  iac:
+    ALL:
+      /*: {}
