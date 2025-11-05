@@ -53,3 +53,9 @@ jobs:
 
       - name: Run wiz CLI IaC scan
         run: ./wizcli iac scan --path $SCAN_PATH --log debug.txt
+
+      - name: Upload Log file
+        uses: actions/upload-artifact@v4
+        with:
+          name: debug_log
+          path: debug.txt
