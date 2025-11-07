@@ -59,3 +59,6 @@ jobs:
         with:
           name: debug_log
           path: debug.txt
+
+      - name: grep log
+        run: grep EXCEPTION debug.txt || echo "No exceptions found"
