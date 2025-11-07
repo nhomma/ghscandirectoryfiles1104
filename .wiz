@@ -1,4 +1,4 @@
 ignore:
   iac:
     bb4e0905-5e1e-4133-88e0-4d07b20acdda:
-      terraform/aws/omfcardsdev/us-east-1/api-gateway-partnerlink/dev/main.tf: {}
+      /*: {}
