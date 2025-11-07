@@ -1,4 +1,4 @@
 ignore:
   iac:
-    2d7f76d5-e7e2-46c8-be67-3931434405ff:
+    ALL:
       terraform/**/main.tf: {}
