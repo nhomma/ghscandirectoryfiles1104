@@ -9,11 +9,6 @@ resource "aws_iam_policy" "sso_get_permission_set_org" {
         Effect = "Allow"
         Action = "sso:GetPermissionSet"
         Resource = "*"
-        Condition = {
-          StringEquals = {
-            "aws:PrincipalOrgID" = "o-zcfm3iyr1k"
-          }
-        }
       }
     ]
   })
