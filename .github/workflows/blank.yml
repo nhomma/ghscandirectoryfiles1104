@@ -50,6 +50,14 @@ jobs:
           pwd
           ls -la
           echo ""
+          echo "GITHUB_ACTIONS = " + "$GITHUB_ACTIONS"
+          echo "$GITHUB_REF_NAME"
+          echo "$GITHUB_ACTOR"
+          echo "$GITHUB_REPOSITORY"
+          echo "$GITHUB_SHA"
+          echo "$GITHUB_JOB"
+          echo "$GITHUB_SERVER_URL"
+          echo ""
 
       - name: Run wiz CLI IaC scan
         run: ./wizcli iac scan --path $SCAN_PATH --log debug.txt
@@ -59,3 +67,6 @@ jobs:
         with:
           name: debug_log
           path: debug.txt
+
+      - name: grep log
+        run: grep EXCEPTION debug.txt || echo "No exceptions found"
