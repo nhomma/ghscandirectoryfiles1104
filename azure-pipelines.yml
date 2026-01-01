@@ -17,3 +17,16 @@ steps:
     echo Add other tasks to build, test, and deploy your project.
     echo See https://aka.ms/yaml
   displayName: 'Run a multi-line script'
+
+- task: wiz@0
+  inputs:
+    command: 'iac'
+    clientid: '$(WizClientId)'
+    secret: '$(WizClientSecret)'
+    path: '.'
+    # Show all results - not just ones that trigger based on policy
+    policyHitsOnly: false
+    # Print out summary of results
+    summary: true
+    sensitiveData: true
+  displayName: "Static Analysis: Perform Wiz IaC Scan"
