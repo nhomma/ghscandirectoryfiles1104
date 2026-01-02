@@ -20,7 +20,7 @@ steps:
 
 - task: wiz@0
   inputs:
-    command: 'iac'
+    command: 'dir'
     clientid: '$(WizClientId)'
     secret: '$(WizClientSecret)'
     path: '.'
@@ -30,3 +30,4 @@ steps:
     summary: true
     sensitiveData: true
   displayName: "Static Analysis: Perform Wiz IaC Scan"
+
