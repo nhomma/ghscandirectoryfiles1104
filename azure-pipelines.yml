@@ -50,3 +50,10 @@ steps:
     scanSecrets: true
   displayName: "Static Analysis: Perform Wiz Directory Scan"
 
+- task: wiz@1
+  inputs:
+    serviceConnectionId: 'wiz-service-connection'
+    command: 'scan'
+    scanType: 'dir'
+    path: '.'
+    policies: '[Duplicated] New IaC - nhomma'
