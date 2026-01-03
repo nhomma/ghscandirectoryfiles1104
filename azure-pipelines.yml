@@ -20,6 +20,7 @@ steps:
 
 - task: wiz@0
   inputs:
+    scanPolicies: 'nhomma - new IAC Policy'
     fileHashesScan: true
     debug: true
     command: 'iac'
@@ -56,4 +57,4 @@ steps:
     command: 'scan'
     scanType: 'dir'
     path: '.'
-    policies: '[Duplicated] New IaC - nhomma'
+    policies: 'nhomma - new IAC Policy'
