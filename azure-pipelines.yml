@@ -18,38 +18,38 @@ steps:
     echo See https://aka.ms/yaml
   displayName: 'Run a multi-line script'
 
-- task: wiz@0
-  inputs:
-    scanPolicies: 'nhomma - new IAC Policy'
-    fileHashesScan: true
-    debug: true
-    command: 'iac'
-    clientid: '$(WizClientId)'
-    secret: '$(WizClientSecret)'
-    path: '.'
-    # Show all results - not just ones that trigger based on policy
-    policyHitsOnly: false
-    # Print out summary of results
-    summary: true
-    sensitiveData: true
-    scanSecrets: true
-  displayName: "Static Analysis: Perform Wiz IaC Scan"
+#- task: wiz@0
+#  inputs:
+#    scanPolicies: 'nhomma - new IAC Policy'
+#    fileHashesScan: true
+#    debug: true
+#    command: 'iac'
+#    clientid: '$(WizClientId)'
+#    secret: '$(WizClientSecret)'
+#    path: '.'
+#    # Show all results - not just ones that trigger based on policy
+#    policyHitsOnly: false
+#    # Print out summary of results
+#    summary: true
+#    sensitiveData: true
+#    scanSecrets: true
+#  displayName: "Static Analysis: Perform Wiz IaC Scan"
 
-- task: wiz@0
-  inputs:
-    fileHashesScan: true
-    debug: true
-    command: 'dir'
-    clientid: '$(WizClientId)'
-    secret: '$(WizClientSecret)'
-    path: '.'
-    # Show all results - not just ones that trigger based on policy
-    policyHitsOnly: false
-    # Print out summary of results
-    summary: true
-    sensitiveData: true
-    scanSecrets: true
-  displayName: "Static Analysis: Perform Wiz Directory Scan"
+#- task: wiz@0
+#  inputs:
+#    fileHashesScan: true
+#    debug: true
+#    command: 'dir'
+#    clientid: '$(WizClientId)'
+#    secret: '$(WizClientSecret)'
+#    path: '.'
+#    # Show all results - not just ones that trigger based on policy
+#    policyHitsOnly: false
+#    # Print out summary of results
+#    summary: true
+#    sensitiveData: true
+#    scanSecrets: true
+#  displayName: "Static Analysis: Perform Wiz Directory Scan"
 
 - task: wiz@1
   inputs:
@@ -59,3 +59,4 @@ steps:
     scanType: 'dir'
     path: '.'
     policies: 'nhomma - new IAC Policy'
+  continueOnError: false
