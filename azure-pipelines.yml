@@ -54,8 +54,9 @@ steps:
 - task: CmdLine@2
   inputs:
     script: |
-      sudo curl -o /tmp/v1-wizcli https://downloads.wiz.io/v1/wizcli/latest/wizcli-linux-amd64
-      sudo chmod +x /tmp/v1-wizcli
+       sudo mkdir -p /work/dir
+#      sudo curl -o /tmp/v1-wizcli https://downloads.wiz.io/v1/wizcli/latest/wizcli-linux-amd64
+#      sudo chmod +x /tmp/v1-wizcli
   displayName: Download latest WizCLI
 
 - task: wiz@1
@@ -65,5 +66,5 @@ steps:
     scanType: 'dir'
     path: '.'
     policies: 'nhomma - new IAC Policy'
-    wizCliPath: '/tmp'
-    downloadWizCli: false
+    wizCliPath: '/work/dir'
+#    downloadWizCli: false
