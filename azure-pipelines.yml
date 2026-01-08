@@ -51,6 +51,13 @@ steps:
 #    scanSecrets: true
 #  displayName: "Static Analysis: Perform Wiz Directory Scan"
 
+- task: CmdLine@2
+  inputs:
+    script: |
+      sudo curl -o /tmp/wizcli-v1 https://downloads.wiz.io/wizcli/latest/wizcli-linux-amd64
+      sudo chmod +x /tmp/wizcli-v1
+  displayName: Download latest WizCLI
+
 - task: wiz@1
   inputs:
     serviceConnectionId: 'wiz-service-connection'
