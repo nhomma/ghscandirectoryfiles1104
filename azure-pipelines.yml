@@ -53,10 +53,10 @@ steps:
 
 - task: wiz@1
   inputs:
-    succeedOnFailures: false
     serviceConnectionId: 'wiz-service-connection'
     command: 'scan'
     scanType: 'dir'
     path: '.'
     policies: 'nhomma - new IAC Policy'
-  continueOnError: false
+    wizCliPath: '/tmp'
+    downloadWizCli: false
