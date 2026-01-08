@@ -71,4 +71,5 @@ steps:
     path: '.'
     policies: 'nhomma - new IAC Policy'
     wizCliPath: '/work/dir'
+    wizDir: '/tmp'
 #    downloadWizCli: false
