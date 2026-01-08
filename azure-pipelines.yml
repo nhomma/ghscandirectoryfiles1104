@@ -58,6 +58,8 @@ steps:
        sudo chmod 777 /work/dir
        sudo curl -o /work/dir/v1-wizcli https://downloads.wiz.io/v1/wizcli/latest/wizcli-linux-amd64
        sudo chmod +x /work/dir/v1-wizcli
+       sudo curl -o /work/dir/wizcli https://downloads.wiz.io/wizcli/latest/wizcli-linux-amd64
+       sudo chmod +x /work/dir/wizcli
   displayName: Download latest WizCLI
 
 #      sudo curl -o /tmp/v1-wizcli https://downloads.wiz.io/v1/wizcli/latest/wizcli-linux-amd64
@@ -73,3 +75,12 @@ steps:
     wizCliPath: '/work/dir'
     wizDir: '/tmp'
 #    downloadWizCli: false
+
+- task: wiz@0
+  inputs:
+    command: 'dir'
+    clientid: '$(WizClientId)'
+    secret: '$(WizClientSecret)'
+    path: '.'
+    wizCliPath: '/work/dir'
+    wizDir: '/tmp'
