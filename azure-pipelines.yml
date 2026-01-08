@@ -54,8 +54,8 @@ steps:
 - task: CmdLine@2
   inputs:
     script: |
-      sudo curl -o /tmp/wizcli-v1 https://downloads.wiz.io/wizcli/latest/wizcli-linux-amd64
-      sudo chmod +x /tmp/wizcli-v1
+      sudo curl -o /tmp/v1-wizcli https://downloads.wiz.io/wizcli/latest/wizcli-linux-amd64
+      sudo chmod +x /tmp/v1-wizcli
   displayName: Download latest WizCLI
 
 - task: wiz@1
