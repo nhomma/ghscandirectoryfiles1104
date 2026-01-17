@@ -1,0 +1,4 @@
+# Extremely old versions with high-criticality vulnerabilities
+Django==1.11.28      # Multiple CVEs including RCE
+requests==2.19.1     # Vulnerable to session hijacking
+jinja2==2.10.1       # Vulnerable to Template Injection (SSTi)
