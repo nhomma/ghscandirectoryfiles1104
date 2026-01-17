@@ -65,20 +65,20 @@ steps:
 #      sudo curl -o /tmp/v1-wizcli https://downloads.wiz.io/v1/wizcli/latest/wizcli-linux-amd64
 #      sudo chmod +x /tmp/v1-wizcli
 
-#- task: wiz@1
-#  inputs:
-#    serviceConnectionId: 'wiz-service-connection'
-#    command: 'scan'
-#    scanType: 'dir'
-#    path: '.'
-#    policies: 'nhomma - new IAC Policy'
+- task: wiz@1
+  inputs:
+    serviceConnectionId: 'wiz-service-connection'
+    command: 'scan'
+    scanType: 'dir'
+    path: '.'
+    policies: 'nhomma - new IAC Policy'
 #    wizCliPath: '/work/dir'
 #    wizDir: '/tmp'
 #    downloadWizCli: false
 
-- task: wiz@0
-  inputs:
-    command: 'dir'
-    clientid: '$(WizClientId)'
-    secret: '$(WizClientSecret)'
-    path: '.'
+#- task: wiz@0
+#  inputs:
+#    command: 'dir'
+#    clientid: '$(WizClientId)'
+#    secret: '$(WizClientSecret)'
+#    path: '.'
