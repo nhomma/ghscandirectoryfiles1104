@@ -54,16 +54,16 @@ steps:
 - task: CmdLine@2
   inputs:
     script: |
-       sudo mkdir -p /work/dir
-       sudo chmod 777 /work/dir
-       sudo curl -o /work/dir/v1-wizcli https://downloads.wiz.io/v1/wizcli/latest/wizcli-linux-amd64
-       sudo chmod +x /work/dir/v1-wizcli
-       sudo curl -o /tmp/wizcli https://downloads.wiz.io/wizcli/latest/wizcli-linux-amd64
-       sudo chmod +x /tmp/wizcli
+      sudo curl -o /tmp/v1-wizcli https://downloads.wiz.io/v1/wizcli/latest/wizcli-linux-amd64
+      sudo chmod +x /tmp/v1-wizcli
   displayName: Download latest WizCLI
 
-#      sudo curl -o /tmp/v1-wizcli https://downloads.wiz.io/v1/wizcli/latest/wizcli-linux-amd64
-#      sudo chmod +x /tmp/v1-wizcli
+#       sudo mkdir -p /work/dir
+#       sudo chmod 777 /work/dir
+#       sudo curl -o /work/dir/v1-wizcli https://downloads.wiz.io/v1/wizcli/latest/wizcli-linux-amd64
+#       sudo chmod +x /work/dir/v1-wizcli
+#       sudo curl -o /tmp/wizcli https://downloads.wiz.io/wizcli/latest/wizcli-linux-amd64
+#       sudo chmod +x /tmp/wizcli
 
 - task: wiz@1
   inputs:
