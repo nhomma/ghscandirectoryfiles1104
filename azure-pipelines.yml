@@ -10,13 +10,13 @@ pool:
   vmImage: ubuntu-latest
 
 steps:
-- script: echo Hello, world!
-  displayName: 'Run a one-line script'
+#- script: echo Hello, world!
+#  displayName: 'Run a one-line script'
 
-- script: |
-    echo Add other tasks to build, test, and deploy your project.
-    echo See https://aka.ms/yaml
-  displayName: 'Run a multi-line script'
+#- script: |
+#    echo Add other tasks to build, test, and deploy your project.
+#    echo See https://aka.ms/yaml
+#  displayName: 'Run a multi-line script'
 
 #- task: wiz@0
 #  inputs:
@@ -51,12 +51,12 @@ steps:
 #    scanSecrets: true
 #  displayName: "Static Analysis: Perform Wiz Directory Scan"
 
-- task: CmdLine@2
-  inputs:
-    script: |
-      sudo curl -o /tmp/v1-wizcli https://downloads.wiz.io/v1/wizcli/latest/wizcli-linux-amd64
-      sudo chmod +x /tmp/v1-wizcli
-  displayName: Download latest WizCLI
+#- task: CmdLine@2
+#  inputs:
+#    script: |
+#      sudo curl -o /tmp/v1-wizcli https://downloads.wiz.io/v1/wizcli/latest/wizcli-linux-amd64
+#      sudo chmod +x /tmp/v1-wizcli
+#  displayName: Download latest WizCLI
 
 #       sudo mkdir -p /work/dir
 #       sudo chmod 777 /work/dir
