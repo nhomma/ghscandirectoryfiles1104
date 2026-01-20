@@ -71,6 +71,7 @@ steps:
     command: 'scan'
     scanType: 'dir'
     path: '.'
+    byPolicyHits: 'DISABLED'
 #    policies: 'nhomma - new IAC Policy'
 #    wizCliPath: '/work/dir'
 #    wizDir: '/tmp'
