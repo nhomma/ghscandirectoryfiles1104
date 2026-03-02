@@ -59,6 +59,21 @@ jobs:
 #      - name: Run wiz CLI IaC scan
 #        run: ./wizcli scan dir $SCAN_PATH --client-id "" --log debug.txt
 
+      - name: Configure AWS credentials
+        uses: aws-actions/configure-aws-credentials@v4
+        with:
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws_session_token: ${{ secrets.AWS_SESSION_TOKEN }}
+          aws-region: us-east-2
+
+      - name: Login to Amazon ECR
+        id: login-ecr
+        uses: aws-actions/amazon-ecr-login@v2
+
+      - name: Pull image
+        run: docker pull 071499847599.dkr.ecr.us-east-2.amazonaws.com/dotnet-framework-sdk:latest
+        
       - name: Run wiz CLI Image scan
         env:
           WIZ_CLIENT_ID: ${{ secrets.WIZ_CLIENT_ID_V1 }}
