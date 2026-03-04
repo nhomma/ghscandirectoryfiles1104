@@ -78,7 +78,7 @@ jobs:
         env:
           WIZ_CLIENT_ID: ${{ secrets.WIZ_CLIENT_ID_V1 }}
           WIZ_CLIENT_SECRET: ${{ secrets.WIZ_CLIENT_SECRET_V1 }}
-        run: ./wizcli scan container-image $IMAGE --log debug.txt
+        run: ./wizcli scan container-image $IMAGE --driver mount --log debug.txt
         continue-on-error: true
 
       - name: Upload Log file
