@@ -51,12 +51,14 @@ steps:
 #    scanSecrets: true
 #  displayName: "Static Analysis: Perform Wiz Directory Scan"
 
-#- task: CmdLine@2
-#  inputs:
-#    script: |
+- task: CmdLine@2
+  inputs:
+    script: |
+      sudo curl -o /tmp/wizcli https://downloads.wiz.io/v1/wizcli/1.29.0/wizcli-linux-amd64
+      sudo chmod +x /tmp/v1-wizcli
+  displayName: Download latest WizCLI
+
 #      sudo curl -o /tmp/v1-wizcli https://downloads.wiz.io/v1/wizcli/latest/wizcli-linux-amd64
-#      sudo chmod +x /tmp/v1-wizcli
-#  displayName: Download latest WizCLI
 
 #       sudo mkdir -p /work/dir
 #       sudo chmod 777 /work/dir
@@ -71,11 +73,11 @@ steps:
     command: 'scan'
     scanType: 'dir'
     path: '.'
-    byPolicyHits: 'DISABLED'
+#    byPolicyHits: 'DISABLED'
 #    policies: 'nhomma - new IAC Policy'
 #    wizCliPath: '/work/dir'
 #    wizDir: '/tmp'
-#    downloadWizCli: false
+    downloadWizCli: false
 
 #- task: wiz@0
 #  inputs:
