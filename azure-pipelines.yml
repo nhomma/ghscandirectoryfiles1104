@@ -56,9 +56,9 @@ steps:
     script: |
       sudo mkdir -p /work/dir
       sudo chmod 777 /work/dir
-      sudo curl -o /work/dir/wizcli https://downloads.wiz.io/v1/wizcli/1.29.0/wizcli-linux-amd64
-      sudo chmod +x /work/dir/wizcli
-  displayName: Download latest WizCLI
+      sudo curl -o /work/dir/v1-wizcli https://downloads.wiz.io/v1/wizcli/1.29.0/wizcli-linux-amd64
+      sudo chmod +x /work/dir/v1-wizcli
+  displayName: Download WizCLI
 
 #      sudo curl -o /tmp/v1-wizcli https://downloads.wiz.io/v1/wizcli/latest/wizcli-linux-amd64
 
